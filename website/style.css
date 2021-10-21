@@ -1,0 +1,160 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-image: url('./city.jpeg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app{
+    display: grid;
+    grid-template-rows: 80px 100px 1fr 2fr;
+    grid-auto-rows: minmax(30px, auto);
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.holder{
+    text-align: center;
+}
+
+.zip {
+    justify-self: center;
+}
+
+.entry{
+    margin-top: 10%;
+}
+
+.bg {
+    background: rgba(52, 73, 94, .9);
+    border-radius: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+}
+
+#entryHolder{
+    padding-top: 20px;
+    display: grid;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "date temp"
+    "cntnt cntnt";
+}
+
+#date{
+    font-size: 30px;
+    grid-area: date;
+}
+
+#temp{
+    font-size: 50px;
+    grid-area: temp;
+}
+
+#content{
+    padding-top: 10px;
+    grid-area: cntnt;
+    font-size: 30px;
+}
+
+.headline {
+    color: white;
+    font-size: 30px;
+    background-color: #3B4A6B;
+    padding-top: 20px;
+    text-align: center; 
+}
+
+.title{
+    color: white;
+    font-size: 26px;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    /* display:block;
+    font-size: 27px; */
+}
+
+input{
+    display:block;
+    height: 60px;
+    width: 320px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    border-radius: 25px;
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    background: #3b4a6b;
+    color: white;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+h1{
+    font-size: 36px;
+}
+
+textarea{
+    color: black;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: black; 
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    /* color: transparent; */
+} 
+
+input:focus::placeholder,
+select:focus::placeholder,
+textarea:focus::placeholder {
+    color: transparent;
+  }
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: black; 
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: black;
+    font-family: 'Oswald', sans-serif;
+
+} 
