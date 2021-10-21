@@ -1,7 +1,7 @@
 /* Global Variables */
 // Personal API Key for OpenWeatherMap API
 let baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-let apiKey = '&appid=76e23e56912fcdf08516056e982c201e';
+let apiKey = '&appid=76e23e56912fcdf08516056e982c201e&units=metric';
 let holderEntry = document.querySelector('.entry');
 
 // http://api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=76e23e56912fcdf08516056e982c201e
@@ -25,6 +25,8 @@ function performAction(e){
         })
         .then(function(){
             updateUI();
+        }).then(function(){
+            holderEntry.innerHTML = "";
         })
 }
 
@@ -72,7 +74,7 @@ const updateUI = async() => {
             let div = document.createElement('div');
             div.setAttribute('id', attr);
             if (attr == 'temp'){
-                div.textContent = allData[attr] + '°F'
+                div.innerHTML = `${allData[attr]}°C`
             } else if (attr == 'date') {
                 day = allData[attr].split('.')[1];
                 mth = monthAlphabet(allData[attr].split('.')[0]);
